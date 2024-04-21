@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] **"Wrong turn"** - `feature`
+- [x] **"Wrong turn"** - `feature`
 - [ ] **"Great! Now what?"** - `feature`
 - [ ] **"The burning of harrenhal"** - `feature`
 - [ ] **"Je ne parle pas anglais"** - `feature`
