@@ -6,6 +6,7 @@ import { Invoice } from "../Invoice.model";
 import { fetchAllInvoices, deleteInvoice } from "../InvoiceApi";
 import { useNavigate } from "react-router-dom";
 import { showNotification } from "@mantine/notifications";
+import { SingleInvoiceStatus } from "./components";
 
 const Invoices = (): JSX.Element => {
   const [invoices, setInvoices] = useState<Invoice[]>([]);
@@ -48,7 +49,9 @@ const Invoices = (): JSX.Element => {
         navigate(`/edit-invoice/${invoice.id}`);
       }}
     >
-      <td>{invoice.status}</td>
+      <td>
+        <SingleInvoiceStatus status={invoice.status} />
+      </td>
       <td>{new Date(invoice.dueDate).toLocaleDateString("en-GB")}</td>
       <td>{invoice.invoiceNumber}</td>
       <td>{`${invoice.customer.givenname} ${invoice.customer.surname}`}</td>
