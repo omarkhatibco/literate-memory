@@ -16,8 +16,10 @@ import { DatePicker } from "@mantine/dates";
 import { Customer, Invoice } from "../Invoice.model";
 import { createInvoice, fetchInvoice } from "../InvoiceApi";
 import { convertToDateTime } from "../../../helpers/dateHelpers";
-import { showNotification, NotificationData } from "@mantine/notifications";
+import { showNotification } from "@mantine/notifications";
 import { useNavigate } from "react-router-dom";
+
+type NotificationData = Parameters<typeof showNotification>[0];
 
 type InvoiceFormState = Omit<Invoice, "dueDate"> & {
   dueDate: Date | null;
