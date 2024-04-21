@@ -2,7 +2,7 @@
 
 - [x] **"Wrong turn"** - `feature`
 - [x] **"Great! Now what?"** - `feature`
-- [ ] **"The burning of harrenhal"** - `feature`
+- [x] **"The burning of harrenhal"** - `feature`
 - [ ] **"Je ne parle pas anglais"** - `feature`
 - [ ] **"He's just a little shy"** - `feature`
 - [ ] **"It's all about DX"** - `feature`
