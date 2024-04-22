@@ -18,6 +18,7 @@ import { createInvoice, fetchInvoice } from "../InvoiceApi";
 import { convertToDateTime } from "../../../helpers/dateHelpers";
 import { showNotification } from "@mantine/notifications";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "../../../hooks";
 
 type NotificationData = Parameters<typeof showNotification>[0];
 
@@ -131,6 +132,7 @@ function formStateHandler(
 }
 
 const EditInvoice = (): JSX.Element => {
+  const t = useTranslation();
   const navigate = useNavigate();
   const params = useParams();
   const isNewInvoice = params.invoiceId === undefined;
@@ -201,15 +203,15 @@ const EditInvoice = (): JSX.Element => {
       <form>
         <Title mb={"xl"} order={2}>
           {isNewInvoice
-            ? "Create new invoice"
-            : `Edit invoice: ${params.invoiceId}`}
+            ? t("CREATE_INVOICE")
+            : `${t("EDIT_INVOICE")}: ${params.invoiceId}`}
         </Title>
         <div className={styles["form-section"]}>
           <SimpleGrid cols={2}>
             <div>
-              <Title order={5}>Date</Title>
+              <Title order={5}>{t("DATE")}</Title>
               <Text fz="xs" c="dimmed">
-                Enter due date of the invoice
+                {t("INVOICE_FORM_DATE_LABEL")}
               </Text>
             </div>
             <DatePicker
@@ -226,10 +228,9 @@ const EditInvoice = (): JSX.Element => {
         <div className={styles["form-section"]}>
           <SimpleGrid cols={2}>
             <div>
-              <Title order={5}>Customer</Title>
+              <Title order={5}>{t("CUSTOMER")}</Title>
               <Text fz="xs" c="dimmed">
-                Enter the name and surname of the customer the invoice belongs
-                to
+                {t("INVOICE_FORM_CUSTOMER_LABEL")}{" "}
               </Text>
             </div>
             <div>
@@ -239,7 +240,7 @@ const EditInvoice = (): JSX.Element => {
                 onChange={(e) => {
                   dispatch({ type: "name", payload: e.currentTarget.value });
                 }}
-                label="Name"
+                label={t("NAME")}
               />
               <TextInput
                 required={true}
@@ -247,7 +248,7 @@ const EditInvoice = (): JSX.Element => {
                 onChange={(e) => {
                   dispatch({ type: "surname", payload: e.currentTarget.value });
                 }}
-                label="Surname"
+                label={t("SURNAME")}
               />
             </div>
           </SimpleGrid>
@@ -255,7 +256,7 @@ const EditInvoice = (): JSX.Element => {
         <div className={styles["form-section"]}>
           <SimpleGrid cols={2}>
             <div>
-              <Title order={5}>Price</Title>
+              <Title order={5}>{t("PRICE")}</Title>
             </div>
             <div>
               <NumberInput
@@ -263,20 +264,20 @@ const EditInvoice = (): JSX.Element => {
                 value={invoiceForm.priceNet}
                 onChange={onAmountNetChange}
                 precision={2}
-                label="Price (Net)"
+                label={t("PRICE_NET")}
               />
               <NumberInput
                 required={true}
                 value={invoiceForm.priceGross}
                 onChange={onAmountGrossChange}
                 precision={2}
-                label="Price (brut)"
+                label={t("PRICE_BRUT")}
               />
             </div>
           </SimpleGrid>
         </div>
         <Group position="right">
-          <Button onClick={submitInvoice}>Create invoice</Button>
+          <Button onClick={submitInvoice}>{t("CREATE_INVOICE")}</Button>
         </Group>
       </form>
     </Container>

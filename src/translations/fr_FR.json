@@ -8,6 +8,6 @@
   "PRICE_NET": "Prix (Net)",
   "PRICE_BRUT": "Prix (Brut)",
   "INVOICE_FORM_DATE_LABEL": "Entrez la date d'échéance de la facture",
-  "INVOICE_FORM_CONTACT_LABEL": "Entrez le nom et le prénom du client auquel la facture appartient",
+  "INVOICE_FORM_CUSTOMER_LABEL": "Entrez le nom et le prénom du client auquel la facture appartient",
   "CREATE_INVOICE": "Créer une facture"
 }
