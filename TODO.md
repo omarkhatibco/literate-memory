@@ -4,7 +4,7 @@
 - [x] **"Great! Now what?"** - `feature`
 - [x] **"The burning of harrenhal"** - `feature`
 - [ ] **"Je ne parle pas anglais"** - `feature`
-- [ ] **"He's just a little shy"** - `feature`
+- [x] **"He's just a little shy"** - `feature`
 - [ ] **"It's all about DX"** - `feature`
 - [ ] **"Which way is up again?"** - `feature`
 - [x] **"Make it pretty"** - `feature`
