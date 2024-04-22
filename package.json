@@ -36,6 +36,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@types/sort-by": "^1.2.3",
     "@vitejs/plugin-react": "^2.2.0",
     "jsdom": "^20.0.3",
     "sass": "^1.56.1",

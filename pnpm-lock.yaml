@@ -79,6 +79,9 @@ devDependencies:
   '@types/react-dom':
     specifier: ^18.0.8
     version: 18.2.25
+  '@types/sort-by':
+    specifier: ^1.2.3
+    version: 1.2.3
   '@vitejs/plugin-react':
     specifier: ^2.2.0
     version: 2.2.0(vite@3.2.10)
@@ -976,6 +979,10 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
+
+  /@types/sort-by@1.2.3:
+    resolution: {integrity: sha512-Q8Pg7o2iHWFf7pR4jIGb+ntxwwL7a/WWLFNJj8jEN14tPQdfwZLCqK68q6mo1WONqa68OysEPuFvNA3uGm0crw==}
+    dev: true
 
   /@types/stack-utils@2.0.3:
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
