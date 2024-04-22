@@ -5,6 +5,7 @@ import { Invoices } from "../pages/invoice/invoices/Invoices";
 import { TopSecret } from "../pages/top-secret/TopSecret";
 import { EditInvoice } from "../pages/invoice/edit-invoice/EditInvoice";
 import { NotFound } from "../pages/not-found/NotFound";
+import { ProtectedRoute } from "../components/protectedRoute";
 
 const routes: RouteObject[] = [
   {
@@ -34,7 +35,11 @@ const routes: RouteObject[] = [
       },
       {
         id: "TOPSECRET",
-        element: <TopSecret />,
+        element: (
+          <ProtectedRoute>
+            <TopSecret />
+          </ProtectedRoute>
+        ),
         path: "top-secret",
       },
     ],
