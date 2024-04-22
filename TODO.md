@@ -5,7 +5,7 @@
 - [x] **"The burning of harrenhal"** - `feature`
 - [x] **"Je ne parle pas anglais"** - `feature`
 - [x] **"He's just a little shy"** - `feature`
-- [ ] **"It's all about DX"** - `feature`
+- [x] **"It's all about DX"** - `feature`
 - [x] **"Which way is up again?"** - `feature`
 - [x] **"Make it pretty"** - `feature`
 - [-] **"Wait, do I know you?"** - `feature` `frontend + backend`
