@@ -9,4 +9,4 @@
 - [ ] **"Which way is up again?"** - `feature`
 - [x] **"Make it pretty"** - `feature`
 - [-] **"Wait, do I know you?"** - `feature` `frontend + backend`
-- [ ] **"Are you still eating that?"** - `feature`
+- [x] **"Are you still eating that?"** - `feature`
